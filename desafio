@@ -1,0 +1,24 @@
+# 1. Entrada de dados
+print("--- Controle de Entrada do Evento Escolar ---")
+alunos = int(input("Digite a quantidade de alunos: "))
+monitores = int(input("Digite a quantidade de monitores: "))
+convidados = int(input("Digite a quantidade de convidados: "))
+
+# 2. Definição das regras (limites)
+LIMITE_INGRESSOS = 100
+LIMITE_CONVIDADOS = 20
+
+# 3. Cálculos básicos
+total_pessoas = alunos + monitores + convidados
+
+# 4. Estrutura de decisão (Validações)
+if convidados > LIMITE_CONVIDADOS:
+    print("\n❌ Erro: O número de convidados excede o limite máximo de 20 pessoas!")
+elif total_pessoas > LIMITE_INGRESSOS:
+    print(f"\n❌ Erro: Capacidade estourada! O total de pessoas ({total_pessoas}) ultrapassa os 100 ingressos disponíveis.")
+else:
+    print("\n✅ Sucesso! O evento está autorizado.")
+    print(f"Total de participantes: {total_pessoas} / {LIMITE_INGRESSOS}")
+    print(f"• Alunos: {alunos}")
+    print(f"• Monitores: {monitores}")
+    print(f"• Convidados: {convidados} (Dentro do limite de 20)")
